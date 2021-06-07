@@ -1,0 +1,30 @@
+
+
+.form-input{
+    width:600px;
+    height:20px;
+}
+
+.form_map{
+
+    margin-top:70px;
+
+}
+
+.button_style{
+    width:90px;
+    height:40px;
+
+    border-radius:5px;
+    background-color:blue;
+    color:white;
+    margin-bottom:20px;
+}
+.main_page{
+    height:650px;
+    width:850px;
+
+    margin-left:400px;
+
+
+}

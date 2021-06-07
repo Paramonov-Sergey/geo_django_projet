@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    calculate distance
+{% endblock %}
+
+
+{% block content %}
+<div class="main_page">
+    <div class="map">{{ map|safe}}</div>
+    <div>
+        {% if distance is not None and destination is not None %}
+            <h3>Distance to {{ destination }} is : {{ distance }} km</h3>
+        {% endif %}
+    </div>
+
+    <form class="form_map" method="post" action="{% url 'measurements:calculate_view' %}" autocomplete="off">
+        {% csrf_token%}
+        {{form.as_p}}
+        <button type="submit" class="button_style">confirm</button>
+        <br>
+    </form>
+    This product includes GeoLite2 data created by MaxMind, available from
+    <a href="https://www.maxmind.com">https://www.maxmind.com</a>.
+    </form>
+</div>
+{% endblock content %}
